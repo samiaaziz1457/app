@@ -1,3 +1,10 @@
+
+
+
+// ignore_for_file: prefer_const_constructors
+
+import 'package:app/views/auth/signin_screen.dart';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -9,12 +16,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+   
     return MaterialApp(
-      title: 'Flutter Demo Home Page',
-      home: Scaffold(
-        appBar: AppBar(title: const Text('Flutter Demo Home Page')),
-        body: const Center(child: Text('Hello, world!')),
-      ),
+      debugShowCheckedModeBanner: false,
+      home:  SigninScreen()
     );
   }
 }
