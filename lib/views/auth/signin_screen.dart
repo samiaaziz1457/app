@@ -1,5 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
+import 'package:app/views/auth/signup_screen.dart';
+import 'package:app/views/home/home.dart';
 import 'package:flutter/material.dart';
 
 class SigninScreen extends StatelessWidget {
@@ -66,16 +68,86 @@ class SigninScreen extends StatelessWidget {
               ),
            ),
           ),
-          
+    //         Padding(
+    //           padding: const EdgeInsets.only(top: 40),
+    //           child: GestureDetector(
+    // onTap: () {
+    //   Navigator.push(
+    //     context,
+    //     MaterialPageRoute(builder: (context) => Homescreen()), // Replace with your screen
+    //   );
+    // },
+    //           child: Container(
+    //           width: 540,
+    //           height: 75,
+    //              decoration: BoxDecoration(
+    //           color:const Color.fromARGB(255, 26, 145, 28),
+    //           borderRadius: BorderRadius.circular(30),
+    //           boxShadow:[ BoxShadow(
+    //             color:const Color.fromARGB(255, 143, 141, 141),blurRadius: 10,spreadRadius: 2, )]),
+    //            child: Row(
+    //             children: [
+    //               SizedBox(
+    //                 width: 200,
+    //               ),
+    //               Text("Sign In",style: TextStyle(fontSize: 35,color: Colors.white,fontWeight:FontWeight.bold),),
+    //             ],
+    //            ),
+    //           ),
+    //         ),
+    //         )  ,
+    Padding(
+      padding: const EdgeInsets.only(top: 30),
+      child: ElevatedButton(
+        onPressed: () {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => Homescreen()), // Replace your screen
+      );
+        },
+        style: ElevatedButton.styleFrom(
+      backgroundColor: const Color.fromARGB(255, 26, 145, 28), // Green
+      padding: const EdgeInsets.symmetric(horizontal: 200, vertical: 15),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(30),
+      ),
+      elevation: 10,
+      shadowColor: const Color.fromARGB(255, 143, 141, 141),
+        ),
+        child: const Text(
+      "Sign In",
+      style: TextStyle(
+        fontSize: 35,
+        color: Colors.white,
+        fontWeight: FontWeight.bold,
+      ),
+        ),
+      ),
+    ),
+
           Padding(
             padding: const EdgeInsets.only(left:100,top: 15),
             child: Row(
               children: [
                 Text("By signing in, You accepting our",style: TextStyle(fontSize: 17,color: Colors.black),),
-                 TextButton(onPressed: (){}, child: Text("Terms and conditions ",style: TextStyle(color: Colors.green,fontSize: 17,fontWeight: FontWeight.bold),))
+                 TextButton(onPressed: (){}, child: Text("Terms and conditions ",style: TextStyle(color: const Color.fromARGB(255, 26, 145, 28),fontSize: 17,fontWeight: FontWeight.bold),))
               ],
             ),
           ),
+          Padding(
+            padding: const EdgeInsets.only(left: 170,top: 50),
+            child: Row(
+              children: [
+                Text("You have already account ",style: TextStyle(color: Colors.black,fontSize: 15,),),
+                 TextButton(onPressed: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context)=>SignupScreen()));
+                 }, child: 
+            Text("Sign Up",style: TextStyle(color: const Color.fromARGB(255, 26, 145, 28),fontSize: 15),)
+            )
+              ],
+            ),
+          ),
+          
         ],
       ),
     );

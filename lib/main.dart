@@ -3,8 +3,8 @@
 
 // ignore_for_file: prefer_const_constructors
 
-import 'package:app/views/auth/signin_screen.dart';
 
+import 'package:app/views/auth/splash.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
    
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home:  SigninScreen()
+      home:Splashscreen()
     );
   }
 }
