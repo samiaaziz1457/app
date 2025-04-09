@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
+import 'package:app/views/auth/email_screen.dart';
 import 'package:app/views/auth/signup_screen.dart';
-import 'package:app/views/home/home.dart';
 import 'package:flutter/material.dart';
 
 class SigninScreen extends StatelessWidget {
@@ -26,9 +26,7 @@ class SigninScreen extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(top:140),
               child: Column(
-                
                 children: [
-              
                   Icon(Icons.medical_services,color:Colors.white,size: 70,),
                 Text("CarePlus",style:TextStyle(color: const Color.fromARGB(255, 255, 255, 255), fontSize: 45),)
                 ],
@@ -40,7 +38,6 @@ class SigninScreen extends StatelessWidget {
           ),
           Text("Welcome",style:TextStyle(color: const Color.fromARGB(255, 26, 145, 28), fontSize: 45,fontWeight:FontWeight.bold),),
           Text("sign in to continue",style: TextStyle(color: Colors.black,fontSize: 25),),
-          
           Padding(
             padding: const EdgeInsets.only(left: 20,right: 20,top: 30),
             child: TextField(
@@ -63,46 +60,17 @@ class SigninScreen extends StatelessWidget {
               decoration: InputDecoration(
                 prefixIcon: Icon(Icons.g_mobiledata,size: 40,),
                 hintText: "Google",
-                
                 border: OutlineInputBorder(borderRadius: BorderRadius.circular(8)),
               ),
            ),
           ),
-    //         Padding(
-    //           padding: const EdgeInsets.only(top: 40),
-    //           child: GestureDetector(
-    // onTap: () {
-    //   Navigator.push(
-    //     context,
-    //     MaterialPageRoute(builder: (context) => Homescreen()), // Replace with your screen
-    //   );
-    // },
-    //           child: Container(
-    //           width: 540,
-    //           height: 75,
-    //              decoration: BoxDecoration(
-    //           color:const Color.fromARGB(255, 26, 145, 28),
-    //           borderRadius: BorderRadius.circular(30),
-    //           boxShadow:[ BoxShadow(
-    //             color:const Color.fromARGB(255, 143, 141, 141),blurRadius: 10,spreadRadius: 2, )]),
-    //            child: Row(
-    //             children: [
-    //               SizedBox(
-    //                 width: 200,
-    //               ),
-    //               Text("Sign In",style: TextStyle(fontSize: 35,color: Colors.white,fontWeight:FontWeight.bold),),
-    //             ],
-    //            ),
-    //           ),
-    //         ),
-    //         )  ,
     Padding(
       padding: const EdgeInsets.only(top: 30),
       child: ElevatedButton(
         onPressed: () {
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => Homescreen()), // Replace your screen
+        MaterialPageRoute(builder: (context) => EmailScreen()), // Replace your screen
       );
         },
         style: ElevatedButton.styleFrom(
@@ -124,7 +92,6 @@ class SigninScreen extends StatelessWidget {
         ),
       ),
     ),
-
           Padding(
             padding: const EdgeInsets.only(left:100,top: 15),
             child: Row(
@@ -147,7 +114,6 @@ class SigninScreen extends StatelessWidget {
               ],
             ),
           ),
-          
         ],
       ),
     );

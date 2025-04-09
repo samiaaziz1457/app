@@ -1,9 +1,9 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 
+import 'package:app/views/auth/email_screen.dart';
 import 'package:app/views/auth/forget_password.dart';
 import 'package:app/views/auth/signin_screen.dart';
-import 'package:app/views/home/home.dart';
 import 'package:flutter/material.dart';
 
 class SignupScreen extends StatelessWidget {
@@ -28,9 +28,7 @@ class SignupScreen extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(top:140),
               child: Column(
-                
                 children: [
-              
                   Icon(Icons.medical_services,color:Colors.white,size: 70,),
                 Text("CarePlus",style:TextStyle(color: const Color.fromARGB(255, 255, 255, 255), fontSize: 45),)
                 ],
@@ -42,7 +40,6 @@ class SignupScreen extends StatelessWidget {
           ),
           Text("Welcome",style:TextStyle(color: const Color.fromARGB(255, 26, 145, 28), fontSize: 45,fontWeight:FontWeight.bold),),
           Text("sign up to continue",style: TextStyle(color: Colors.black,fontSize: 25),),
-          
           Padding(
             padding: const EdgeInsets.only(left: 20,right: 20,top: 30),
             child: TextField(
@@ -64,13 +61,10 @@ class SignupScreen extends StatelessWidget {
             TextField(
               decoration: InputDecoration(
                 prefixIcon: Icon(Icons.g_mobiledata,size: 40,),
-                hintText: "Google",
-                
                 border: OutlineInputBorder(borderRadius: BorderRadius.circular(8)),
               ),
            ),
-          ),
-             
+          ),  
           Padding(
             padding: const EdgeInsets.only(left: 420),
             child: TextButton(onPressed: (){
@@ -85,7 +79,7 @@ class SignupScreen extends StatelessWidget {
         onPressed: () {
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => Homescreen()), // Replace your screen
+        MaterialPageRoute(builder: (context) => EmailScreen()), // Replace your screen
       );
         },
         style: ElevatedButton.styleFrom(
@@ -107,7 +101,6 @@ class SignupScreen extends StatelessWidget {
         ),
       ),
     ),
-      
          Padding(
            padding: const EdgeInsets.only(top: 50,left: 200),
            child: Row(
@@ -119,11 +112,9 @@ class SignupScreen extends StatelessWidget {
                    MaterialPageRoute(builder: (context) =>SigninScreen()), // Replace your screen
                  );
                   }, child: Text("Sign In",style: TextStyle(color: Colors.green,fontSize: 15),))  
-            
              ],
            ),
          ),
-       
         ],
       ),
     );
