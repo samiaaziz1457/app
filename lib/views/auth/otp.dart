@@ -26,9 +26,13 @@ class OtpScreen extends StatelessWidget {
             OtpTextField(
                    numberOfFields: 5,
                    borderColor:Colors.green,
+                  
                    showFieldAsBox: true, 
+                   
                    onCodeChanged: (String code) {
+                    
                    },
+                   
                    onSubmit: (String verificationCode){
               showDialog(
                   context: context,
@@ -45,7 +49,7 @@ class OtpScreen extends StatelessWidget {
         onPressed: () {
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => Homescreen()), // Replace your screen
+        MaterialPageRoute(builder: (context) =>Homescreen()), // Replace your screen
       );
         },
         style: ElevatedButton.styleFrom(
